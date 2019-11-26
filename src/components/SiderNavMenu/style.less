@@ -1,0 +1,36 @@
+@import '../../themes/theme.less';
+
+.SiderNavMenu {
+
+  & > .ant-layout-sider {
+    height: 100%;
+  }
+
+  &
+    > .ant-layout-sider.ant-layout-sider-dark
+    > .ant-layout-sider-children
+    > .ant-menu
+    > .ant-menu-item {
+    height: 40px;
+    font-size: 16px;
+    span {
+      font-size: 16px;
+    }
+    i {
+      font-size: 16px;
+    }
+  }
+}
+
+.SiderNavMenu--logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 0 10px 0;
+  background-color: @react-mobx-template-secondary-color;
+  border-bottom: @layout-trigger-background solid 2px;
+}
+
+.ant-layout-sider-trigger {
+  background: @layout-trigger-background;
+}

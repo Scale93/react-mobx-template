@@ -1,0 +1,4 @@
+const ROUTER_STORE = 'router';
+const REACT_MOBX_DASHBOARD_STORE = 'rmdStore';
+
+export { ROUTER_STORE, REACT_MOBX_DASHBOARD_STORE };
