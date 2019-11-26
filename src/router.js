@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Router, Switch } from 'react-router';
-import { loginPage, appPage, notFoundPage } from 'src/pages';
+import { loginPage, appPage, notFoundPage, echartPage } from 'src/pages';
 
 const RestrictedRoute = ({ component: Component, isLoggedIn, fallback, ...rest }) => (
   <Route
@@ -26,6 +26,7 @@ const AppRouter = ({ history }) => (
       <Route exact path={'/'} render={() => <Redirect to={appPage.path} push />} />
       <Route exact path={loginPage.path} component={loginPage.component} />
       <Route exact path={notFoundPage.path} component={notFoundPage.component} />
+      <Route exact path={echartPage.path} component={echartPage.component} />
       <RestrictedRoute
         isLoggedIn
         path={appPage.path}

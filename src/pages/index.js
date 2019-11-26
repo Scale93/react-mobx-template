@@ -3,6 +3,7 @@ import Loadable from 'react-loadable';
 
 import App from 'src/components/App';
 import NotFound from './NotFound';
+import EChart from './EChart';
 import Loading from 'src/components/Loading';
 
 const loginPage = {
@@ -18,6 +19,12 @@ const notFoundPage = {
   name: 'Not Found',
   path: '/404',
   component: NotFound,
+};
+
+const echartPage = {
+  name: 'EChart Page',
+  path: '/echartexample',
+  component: EChart,
 };
 
 const appPage = {
@@ -37,10 +44,10 @@ const pages = {
     icon: 'dashboard',
   },
   reactmobx1_1: {
-    name: 'ReactMobX1_1',
-    path: '/reactmobx1_1',
+    name: 'EChart Example',
+    path: '/echartexample',
     component: Loadable({
-      loader: () => import('./NotFound'),
+      loader: () => import('./EChart'),
       loading: Loading,
     }),
     icon: 'alert',
@@ -128,4 +135,4 @@ const pages = {
   },
 };
 
-export { loginPage, notFoundPage, appPage, pages };
+export { loginPage, notFoundPage, appPage, echartPage, pages };
